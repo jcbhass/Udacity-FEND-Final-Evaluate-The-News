@@ -16,7 +16,7 @@ app.use(express.static('src/client'))
 console.log(__dirname)
 
 app.get('/', function (req, res) {
-    res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
+    res.sendFile('dist/index.html') //when created the index file in dist folder with HtmlWebPackPlugin, then changed this location
 })
 
 // designates what port the app will listen to for incoming requests
