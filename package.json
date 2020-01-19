@@ -1,16 +1,29 @@
 {
-  "name": "example-project",
+  "name": "evaluate-the-news-udacity-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js"
+    "start": "node src/server/index.js",
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jennifer Bynum-Hasselgren",
   "license": "ISC",
-  "description": "",
+  "description": "The goal of this repo is be an example of a basic but functional app built on Express and Webpack.",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News/issues"
+  },
+  "homepage": "https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News#readme"
 }

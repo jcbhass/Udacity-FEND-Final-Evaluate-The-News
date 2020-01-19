@@ -1,8 +1,15 @@
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+
 
 const app = express()
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
 app.use(express.static('src/client'))
 
