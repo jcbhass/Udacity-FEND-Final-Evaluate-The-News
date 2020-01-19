@@ -25,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News/issues"
   },
-  "homepage": "https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News#readme"
+  "homepage": "https://github.com/jcbhass/Udacity-FEND-Final-Evaluate-The-News#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-loader": "^8.0.6"
+  }
 }
