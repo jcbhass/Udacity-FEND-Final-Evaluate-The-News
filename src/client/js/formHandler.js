@@ -12,4 +12,3 @@ function handleSubmit(event) {
         document.getElementById('results').innerHTML = res.message
     })
 }
-
