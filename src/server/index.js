@@ -3,7 +3,13 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
+
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static('dist'))
 
 console.log(__dirname)
