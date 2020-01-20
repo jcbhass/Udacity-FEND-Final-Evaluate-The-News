@@ -14,6 +14,21 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
+var AYLIENTextAPI = require('aylien_textapi');
+var textapi = new AYLIENTextAPI({
+  application_id: "67161cde",
+  application_key: "5881df14825eecd418915266b175f21c"
+});
+
+textapi.sentiment({
+    'text': 'John is a very good football player!'
+  }, function(error, response) {
+    if (error === null) {
+      console.log(response);
+    }
+  });
+
+
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
