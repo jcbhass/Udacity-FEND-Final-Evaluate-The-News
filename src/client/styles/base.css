@@ -1,6 +1,4 @@
-$themeColor-Dark:#b68d4c;
 body {
-    background-color: $themeColor-Dark;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -13,5 +11,4 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
-    align-content: center;
 }
