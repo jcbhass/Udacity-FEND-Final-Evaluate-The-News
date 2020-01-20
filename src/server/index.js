@@ -1,3 +1,8 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
+
+
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
@@ -16,9 +21,11 @@ console.log(__dirname)
 
 var AYLIENTextAPI = require('aylien_textapi');
 var textapi = new AYLIENTextAPI({
-  application_id: "67161cde",
-  application_key: "5881df14825eecd418915266b175f21c"
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
 });
+
+console.log(`Your API key is ${process.env.API_KEY}`);
 
 textapi.sentiment({
     'text': 'John is a very good football player!'
