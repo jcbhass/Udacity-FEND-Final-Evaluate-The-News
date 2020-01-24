@@ -15,6 +15,34 @@ function checkForName(inputText) {
 
 export { checkForName }
 
+// export const URLS = {
+//     baseUrl: 'https://sandbox.aylien.com/textapi-new',
+//     demoBaseUrl: 'https://api.aylien.com/api/v1',
+//     proxyUrl: 'http://localhost:9093'
+//   };
+
+
+// document.getElementById('generate').addEventListener('click', performAction);
+
+// function performAction(event){
+//     // Gets zipcode and feelings from user input
+//     const zipCode =  document.getElementById('zip').value;
+//     const feelings =  document.getElementById('feelings').value;
+
+//     // Gets zipcode from Open Weather Map
+//     getZipCode(baseURL, zipCode, apiKey) 
+//       .then(function(data){
+//           // Add data to POST request
+//           // data.date = (new Date()).toDateString();
+//           data.date = getDate();
+//           data.feelings = feelings;
+          
+//           // Sends data to the server
+//           postData('/', data);
+//       })
+//       .then(updateUI);
+// }
+
 
 // const updateUI = async () => {
 //     // Gets data from the server
@@ -31,3 +59,36 @@ export { checkForName }
 //       console.log("error", error);
 //     }
 //   }
+
+
+// <!DOCTYPE html>
+// <html>
+// <body>
+
+// <p>When you enter the input field, a function is triggered which sets the background color to yellow. When you leave the input field, a function is triggered which sets the background color to red.</p>
+
+// Enter your name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+// <script>
+// function focusFunction() {
+//   // Focus = Changes the background color of input to yellow
+//   document.getElementById("myInput").style.background = "yellow";
+// }
+
+// function blurFunction() {
+//   // No focus = Changes the background color of input to red
+//   document.getElementById("myInput").style.background = "red";
+// }
+// </script>
+
+// </body>
+// </html>
+
+
+// https://www.dailymail.co.uk/news/article-7910421/Phoenix-police-3-children-pronounced-dead-inside-home.html   neg 0.96
+
+// https://www.dailymail.co.uk/news/article-7911819/California-teens-died-man-chased-intentionally-rammed-car-identified.html neg 0.98
+
+// https://www.dailymail.co.uk/tvshowbiz/article-7912467/Tim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html pos .99
+
+// https://api.aylien.com/api/v1/sentiment?language=en&mode=document&input=https%3A%2F%2Fwww.dailymail.co.uk%2Ftvshowbiz%2Farticle-7912467%2FTim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html&url=https%3A%2F%2Fwww.dailymail.co.uk%2Ftvshowbiz%2Farticle-7912467%2FTim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html&
