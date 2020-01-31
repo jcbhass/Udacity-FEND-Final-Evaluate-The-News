@@ -7,7 +7,7 @@ const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-var AYLIENTextAPI = require('aylien_textapi');
+var aylien = require('aylien_textapi');
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,6 +19,27 @@ console.log(__dirname)
 
 
 console.log(`Your API key is ${process.env.API_KEY}`);
+
+var textapi = new aylien ({
+  application_id: process.env.API_ID,
+  application_key: process.env.API_KEY
+});
+
+app.post('/article', function (req, res) {
+  // // return res.status(200).json(req.body);
+ // // req.body = {text: 'https://www.nytimes.com/2020/01/31/opinion/soros-facebook-zuckerberg.html'}
+  //res.send(mockAPIResponse)
+  textapi.sentiment({
+      url: req.body.articleUrl,
+      mode: 'document',
+    }, function(error, response) {
+      if(error) {
+        return res.status(400).json(error);
+      }
+      
+      return res.status(200).json(response);
+    });
+})
 
 
 app.get('/', function (req, res) {
@@ -32,56 +53,9 @@ app.listen(8080, function () {
 
 
 //const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)})
-var textapi = new AYLIENTextAPI({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY
-});
- 
-app.get('/test', function (req, res) {
-    //res.send(mockAPIResponse)
-    textapi.sentiment({
-        //url: `AYLIENTextAPI`,
-        //'text': 'John is a very good football player!'
-      }, function(error, response) {
-        if (error === null) {
-          console.log(response);
-        }
-      });
-})
 
-// // API request sent to Aylien API
-// app.post('/article', function (req, res) {
-//   console.log('POST request received');
-//   console.log(req.body)
-//   textapi.sentiment({
-//     url: req.body.text,
-//     mode: 'document'
-//   }, function (error, response) {
-//     console.log('inside post function');
-//     console.log(response);
-//     res.send(response)
-//     if (error === null) {
-//       console.log('inside error');
-//       console.log(response);
-//     }
-//   })
-// });
 
-// // Async POST
-// const postData = async ( url = '', data = {})=>{
-//     try{
-//     const response = await fetch(url, {
-//     method: 'POST', 
-//     credentials: 'same-origin', 
-//     headers: {
-//         'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data), // body data type must match "Content-Type" header        
-//     });
-// }catch(error){
-//     console.log("error", error);
-// }
-      
+
 
 // curl https://api.aylien.com/api/v1/sentiment \ 
 //    -H "X-AYLIEN-TextAPI-Application-Key: YOUR_APP_KEY" \
