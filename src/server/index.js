@@ -25,6 +25,13 @@ var textapi = new aylien ({
   application_key: process.env.API_KEY
 });
 
+
+app.get('/test', function (req, res) {
+  console.log(mockAPIResponse);
+  res.send(mockAPIResponse);
+})
+
+
 app.post('/article', function (req, res) {
   // // return res.status(200).json(req.body);
  // // req.body = {text: 'https://www.nytimes.com/2020/01/31/opinion/soros-facebook-zuckerberg.html'}
