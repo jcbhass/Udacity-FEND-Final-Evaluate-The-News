@@ -7,7 +7,5 @@ let json = {
 module.exports = json
 
 
-// const baseURL = 'https://api.aylien.com/api/v1';
-// const apiKey = '&appid=';
-// const apiCode = '';
+
 

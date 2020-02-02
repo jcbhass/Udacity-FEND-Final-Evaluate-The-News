@@ -1,7 +1,6 @@
 import axios from 'axios';
 const validUrl = require('valid-url'); //method taken from https://www.npmjs.com/package/valid-url
 
-
 function handleSubmit(event) {
     event.preventDefault()
 
