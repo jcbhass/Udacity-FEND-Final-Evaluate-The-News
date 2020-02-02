@@ -17,7 +17,6 @@ describe('API Test', () => {
                 expect(res.body.time).toBe(mockAPI.time);
                 done();
             })
-
     });
 
     it('[POST: /article] It should return a response for article endpoint', (done) => {
@@ -37,6 +36,6 @@ describe('API Test', () => {
                 done();
             })
 
-    })
-})
+    });
+});
 
