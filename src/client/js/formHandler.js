@@ -12,7 +12,7 @@ function handleSubmit(event) {
             Client.checkForName(formText) 
             console.log("::: Form Submitted :::")
             //var name = document.getElementById('name').value;
-            axios.post('http://localhost:8080/article', {articleUrl: formText})
+            axios.post('http://localhost:3000/article', {articleUrl: formText})
             .then(function(res) {
                 console.log(res);
                 const data = res.data;
