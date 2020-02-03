@@ -1,49 +1,3 @@
-function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
-
-    if(names.includes(inputText)) {
-        document.getElementById('results').innerHTML = "Welcome, Captain!";
-    }
-}
-
-export { checkForName }
-
-// export const URLS = {
-//     baseUrl: 'https://sandbox.aylien.com/textapi-new',
-//     demoBaseUrl: 'https://api.aylien.com/api/v1',
-//     proxyUrl: 'http://localhost:9093'
-//   };
-
-
-// document.getElementById('generate').addEventListener('click', performAction);
-
-// function performAction(event){
-//     // Gets zipcode and feelings from user input
-//     const zipCode =  document.getElementById('zip').value;
-//     const feelings =  document.getElementById('feelings').value;
-
-//     // Gets zipcode from Open Weather Map
-//     getZipCode(baseURL, zipCode, apiKey) 
-//       .then(function(data){
-//           // Add data to POST request
-//           // data.date = (new Date()).toDateString();
-//           data.date = getDate();
-//           data.feelings = feelings;
-          
-//           // Sends data to the server
-//           postData('/', data);
-//       })
-//       .then(updateUI);
-// }
-
-
 // const updateUI = async () => {
 //     // Gets data from the server
 //     const request = await fetch('/all');
@@ -92,3 +46,4 @@ export { checkForName }
 // https://www.dailymail.co.uk/tvshowbiz/article-7912467/Tim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html pos .99
 
 // https://api.aylien.com/api/v1/sentiment?language=en&mode=document&input=https%3A%2F%2Fwww.dailymail.co.uk%2Ftvshowbiz%2Farticle-7912467%2FTim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html&url=https%3A%2F%2Fwww.dailymail.co.uk%2Ftvshowbiz%2Farticle-7912467%2FTim-Tebow-gives-fans-look-pre-wedding-preparations-marrying-Demi-Leigh-Nel-Peters.html&
+
